@@ -23,9 +23,18 @@ const DefaultMaterial = {
     COURSE_THUMBNAIL: 'https://www.coursef.com/wp-content/uploads/2020/09/course-thumbnail.jpg'
 }
 
+const QuestionType = {
+    MULTIPLE_CHOICE: 'multiple_choice',
+    TRUE_FALSE: 'true_false',
+    SHORT_ANSWER: 'short_answer',
+    ESSAY: 'essay'
+}
+
 module.exports = {
     UserRole,
     DifficultyLevel,
     ContentType,
-    DefaultMaterial
+    DefaultMaterial,
+    QuestionType
 };
+

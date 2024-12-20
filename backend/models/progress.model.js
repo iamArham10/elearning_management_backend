@@ -20,11 +20,16 @@ const progressSchema = new mongoose.Schema({
     },
     time_spent: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
     },
     last_position: {
-        type: Number
+        type: Number,
+        min: 0
     }
+}, {
+    timestamps: true,
+    validateBeforeSave: true
 })
-
+progressSchema.index({ enrollment_id: 1, content_id: 1 }, { unique: true });
 module.exports = mongoose.model('Progress', progressSchema);
